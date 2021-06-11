@@ -9,7 +9,7 @@ from sklearn.datasets import load_diabetes
 diabetse = datasets.load_diabetes
 x_train, x_test, y_train, y_test = train_test_split(digit.data, digit.target, train_size = 0.6)
 
-mlp = MLPClassifier(hidden_layer_sizes=(2), learning_rate_init=0.001, batch_size=32, solver='sgd',verbose=(True))
+mlp = MLPClassifier(hidden_layer_sizes=(20), learning_rate_init=0.001, batch_size=32, solver='sgd',verbose=(True))
 mlp.fit(x_train, y_train)
 res = mlp.predict(x_test)
 
