@@ -22,6 +22,8 @@ x_train=aa[:nov,:] # 입력데이터
 y_train=bb[:nov] # 라벨 값
 
 model=Sequential()
+model.add(Dense(32,input_dim=nc,activation='relu'))
+model.add(Dense(16,activation='relu'))
 model.add(Dense(8,activation='relu'))
 model.add(Dense(4,activation='relu'))
 model.add(Dense(2,activation='relu'))
